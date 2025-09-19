@@ -382,7 +382,7 @@ void main() {
     expect(ThemeDecoder.decodeAppBarTheme(null), null);
     expect(ThemeEncoder.encodeAppBarTheme(null), null);
 
-    const entry = AppBarTheme(
+    const entry = AppBarThemeData(
       actionsPadding: EdgeInsets.all(8.0),
       color: _kColor,
       centerTitle: true,
@@ -630,7 +630,7 @@ void main() {
     expect(ThemeDecoder.decodeBottomAppBarTheme(null), null);
     expect(ThemeEncoder.encodeBottomAppBarTheme(null), null);
 
-    const entry = BottomAppBarTheme(
+    const entry = BottomAppBarThemeData(
       color: _kColor,
       elevation: 8.0,
       height: 20.0,
@@ -3578,7 +3578,7 @@ void main() {
     expect(ThemeDecoder.decodeInputDecorationTheme(null), null);
     expect(ThemeEncoder.encodeInputDecorationTheme(null), null);
 
-    final entry = InputDecorationTheme(
+    final entry = InputDecorationThemeData(
       activeIndicatorBorder: const BorderSide(
         color: _kColor,
         strokeAlign: -2.0,

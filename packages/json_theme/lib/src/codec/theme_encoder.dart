@@ -225,7 +225,7 @@ class ThemeEncoder {
   ///  * [encodeIconThemeData]
   ///  * [encodeSystemUiOverlayStyle]
   ///  * [encodeToolbarTextStyle]
-  static Map<String, dynamic>? encodeAppBarTheme(AppBarTheme? value) {
+  static Map<String, dynamic>? encodeAppBarTheme(AppBarThemeData? value) {
     Map<String, dynamic>? result;
 
     if (value != null) {
@@ -606,7 +606,7 @@ class ThemeEncoder {
   ///  * [encodeEdgeInsetsGeometry]
   ///  * [encodeNotchedShape]
   static Map<String, dynamic>? encodeBottomAppBarTheme(
-    BottomAppBarTheme? value,
+    BottomAppBarThemeData? value,
   ) {
     Map<String, dynamic>? result;
 
@@ -3398,7 +3398,7 @@ class ThemeEncoder {
   ///  * [encodeFloatingLabelBehavior]
   ///  * [encodeTextStyle]
   static Map<String, dynamic>? encodeInputDecorationTheme(
-    InputDecorationTheme? value,
+    InputDecorationThemeData? value,
   ) {
     Map<String, dynamic>? result;
 
@@ -5476,10 +5476,15 @@ class ThemeEncoder {
 
     if (value != null) {
       switch (value) {
+        case ShowValueIndicator.onDrag:
+          result = 'onDrag';
+          break;
         case ShowValueIndicator.always:
           result = 'always';
           break;
-
+        case ShowValueIndicator.alwaysVisible:
+          result = 'alwaysVisible';
+          break;
         case ShowValueIndicator.never:
           result = 'never';
           break;
